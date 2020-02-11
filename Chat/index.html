@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chat App</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="user">
+            <h2>Active Users </h2>
+            <div class="activeUsers">
+                
+            </div>
+        </div>
+        <div class="chatBox">
+            <div class="hearder">
+                <div class="AppName">
+                    <h2>Chat App</h2>
+                </div>
+                <div class="userName">
+                    <h2 id="show_name"></h2>
+                </div>
+                <div class="btns">
+                    <button class="btn" onclick="login()">login</button>
+                    <button class="btn" onclick="logout()" disabled id="logout1">Logout</button>
+                </div>
+            </div>
+            <div class="main ScrollStyle" id="main">
+                <!-- login box  -->
+                <div class="login_box " id="login_box">
+                    <div class="login_box_head">
+                        <h2>Login</h2>
+                        <button id="login_box_close">&times;</button>
+                    </div>
+                    
+                    <div class="login_box_body ">
+                        <form action="" method="post" onsubmit="return false">
+                            <label for="">username</label><br>
+                            <input id= "login_username" type="text" placeholder="Username"><br>
+                            <label for="">password</label><br>
+                            <input id="login_password" type="password" placeholder="password">
+                            <input type="submit" value="Login" onclick="login_submit()">
+                            <input type="submit" value="signup" onclick="signup()">
+                            
+                        </form>
+                    </div>
+                    
+                </div>
+                <!-- signup box -->
+                <div class="signup_box" id="signup_box">
+                    <div class="signup_box_head">
+                        <h2>signup </h2>
+                        <button id="signup_box_close">&times;</button>
+                    </div>
+                    
+                    <div class="signup_box_body">
+                        <form action="" method="post" onsubmit="return false">
+                            <div class="inp">
+                                <label for="">username</label>
+                                <span id="sp001">*</span>
+                                <input type="text" placeholder="username"  onfocus = resetall() id="username">
+                            </div>
+                            <div class="inp">
+                                <label for="">password</label>
+                                <span id="sp002">*</span>
+                                <input type="password" placeholder="password" onfocus = resetall() id="password">
+                            </div>
+                            <div class="inp">
+                                <label for="">name</label>
+                                <span id="sp003">*</span>
+                                <input type="text" placeholder="name" onfocus = resetall() id="fname">
+                            </div>
+                            <div class="inp">
+                                <label for="">email</label>
+                                <span id="sp004">*</span>
+                                <input type="email" placeholder="email"  onfocus = resetall() id="email">
+                            </div>
+                            <input type="submit" value="signup" onclick="submitSingupFrom()">
+                        </form>
+                    </div>
+                    
+                </div>
+                <div id="before_chat">
+                    <i class="fas fa-comments"></i>
+                    <p>Welcome to Public Chat system</h3>
+                       
+                   
+                </div>
+         
+            
+        </div>
+        <div class="footer">
+            <input type="text" id="msg" disabled placeholder="Type Your Messages Here" onclick="sentMessage()">
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+</body>
+</html>
